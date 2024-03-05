@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+/*NAVBAR*/
+
+header{
+    padding: 1.5em;
+    background-color: black;
+}
+nav{
+    display: flex;
+}
+
+
+
+.menu{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 100px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 500px;
+}
+
+.logo > img{
+    width: 100px;
+}
