@@ -32,4 +32,5 @@ homeSpace.appendChild(quote)
 
 export default function homeLoad(){
     homeContent.appendChild(homeSpace)
+
 }

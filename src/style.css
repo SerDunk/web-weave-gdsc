@@ -6,7 +6,19 @@
 
 body{
     height: 100vh;
+
 }
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.wrapper{
+    display: flex;
+    flex-flow: column;
+    
+}
+
 
 /*NAVBAR*/
 
@@ -43,3 +55,109 @@ nav{
 .logo > img{
     width: 100px;
 }
+
+/*EVENTS*/
+
+@keyframes slider {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.swiper-container{
+    display:flex;
+    padding-top: 5em;
+    padding-inline: 1em;
+    white-space: nowrap;
+    animation: 30s slider infinite linear ;
+    transition: transform 0.5s ease;
+}
+
+.swiper-container:hover{
+    animation-play-state: paused;
+}
+
+
+/*TEAM*/
+
+@keyframes lider {
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.team-container{
+    display:flex;
+    padding-top: 5em;
+    padding-inline: 1em;
+    white-space: nowrap;
+    animation: 30s lider infinite linear ;
+    transition: transform 0.5s ease;
+}
+
+.team-container:hover{
+    animation-play-state: paused;
+}
+
+/*CONTACT*/
+
+.contact{
+    background-color: lightgreen;
+}
+
+
+.contact > h1{
+    font-size: 3rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em ;
+}
+
+.contact-container{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-size: 1.5rem;
+}
+
+.links>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 2;
+}
+
+
+

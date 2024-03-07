@@ -1,0 +1,23 @@
+.card{
+    width: 30%;
+    height: 300px;
+    padding: 1em;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    border: 2px solid black;
+
+}
+
+.teams{
+    height: 700px;
+    background-color: lightcoral;
+    text-align: center;
+    overflow: hidden;
+}
+
+.teams > h1{
+    padding-top: 2em;
+    font-size: 3rem;
+}
