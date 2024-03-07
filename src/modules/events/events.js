@@ -3,27 +3,30 @@ import './events.css';
 const swiper = document.querySelector('.swiper-container');
 const eventsSection = document.querySelector('.events');
 
-function createCard(name, desc) {
+function createCard(name) {
     const card = document.createElement('div');
     card.classList.add('card');
-    const cardName = document.createElement('h1');
-    const cardImage = document.createElement('img');
-
-    cardImage.src = `${name}.jpg`;
+    const cardName = document.createElement('h2');
+    const cardImageDiv = document.createElement('div');
+    const cardImage=document.createElement('img')
+    cardImageDiv.classList.add('cardImgDiv')
+    cardImage.src = `assets/images/${name}.jpg`;
     cardName.textContent = name;
-
-    card.appendChild(cardImage);
+    cardName.classList.add('cardName')
+    cardImageDiv.appendChild(cardImage);
+    card.appendChild(cardImageDiv)
     card.appendChild(cardName);
     
     swiper.appendChild(card);
 }
 
 function loadMoreContent() {
-    createCard("Game", "Hello gamers");
-    createCard("Hackathon", "Yay Hack");
-    createCard("AI", "DAMN AI");
-    createCard("SOLDIER", "SOLDIERYES");
-    createCard("yes", "no");
+    createCard("event");
+    createCard("event");
+    createCard("event");
+    createCard("event");
+
+
 }
 
 export default function eventsLoad() {

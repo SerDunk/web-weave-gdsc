@@ -1,26 +1,62 @@
+@font-face {
+    font-family: 'primary-font';
+    src: url(../../fonts/cocognoose/Cocogoose-Pro-Bold-trial.ttf);
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'secondary-font';
+    src: url(../../fonts/roboto/Roboto-Black.ttf);
+    font-style: normal;
+    font-weight: lighter;
+}
 
 .card{
+    position: relative;
     width: 30%;
     height: 300px;
     padding: 1em;
     margin: 10px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     border: 2px solid black;
-
+    font-family: 'secondary-font';
+    box-shadow: 5px 5px var(--red);
+    transition: transform 0.3s ease-in-out;
 }
 
+.card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+.cardName{
+    padding-top: 0.5em;
+}
+
+.cardImgDiv{
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    border: 2px solid black;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
 .events{
     height: 700px;
-    background-color: rgb(237, 237, 2);
+    background-color:var(--yellow);
     text-align: center;
     overflow: hidden;
+    text-transform: uppercase;
+    font-family: 'primary-font';
 }
 
 .events > h1{
-    padding-top: 2em;
-    font-size: 3rem;
+    padding-top: 1em;
+    font-size: 4rem;
+    
 }
 

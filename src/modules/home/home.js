@@ -16,12 +16,12 @@ heroPuzzle.src=puzzle
 homeSpace.appendChild(star)
 homeSpace.appendChild(heroPuzzle)
 
-const gdsc=document.createElement('div')
+const gdsc=document.createElement('h1')
 gdsc.textContent='GDSC SIT'
 gdsc.classList.add('google-dev')
 
-const quote=document.createElement('div')
-quote.textContent='lorem ipsum'
+const quote=document.createElement('p')
+quote.textContent='Crack the Code, Change the World.'
 quote.classList.add('quote')
 
 homeSpace.appendChild(gdsc)

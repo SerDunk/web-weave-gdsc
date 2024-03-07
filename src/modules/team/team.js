@@ -4,34 +4,40 @@ import './team.css';
 const swiper = document.querySelector('.team-container');
 const teamsSection = document.querySelector('.teams');
 
-function createCard(name, desc) {
+function createCardTeam(name, des) {
     const card = document.createElement('div');
-    card.classList.add('card');
-    const cardName = document.createElement('h1');
+    card.classList.add('card-team');
+    const cardName = document.createElement('h2');
+    const cardImageDiv = document.createElement('div');
+    const cardDesc=document.createElement('p')
+    cardDesc.classList.add('designation')
     const cardImage = document.createElement('img');
 
-    cardImage.src = `${name}.jpg`;
+    cardImageDiv.classList.add('cardImgDiv-team')
+    cardImage.src = `assets/images/${name}.jpg`;
     cardName.textContent = name;
-
-    card.appendChild(cardImage);
+    cardDesc.textContent=des;
+    cardName.classList.add('cardName')
+    cardImageDiv.appendChild(cardImage);
+    card.appendChild(cardImageDiv)
     card.appendChild(cardName);
+    card.appendChild(cardDesc)
     
     swiper.appendChild(card);
 }
 
-function loadContent() {
-    createCard("Game", "Hello gamers");
-    createCard("Hackathon", "Yay Hack");
-    createCard("AI", "DAMN AI");
-    createCard("SOLDIER", "SOLDIERYES");
-    createCard("yes", "no");
+function loadContentTeam() {
+    createCardTeam("team","designation");
+    createCardTeam("team","designation");
+    createCardTeam("team","designation");
+    createCardTeam("team","designation");
 }
 
 export default function teamsLoad() {
-    loadContent();
+    loadContentTeam();
 
     setInterval(() => {
-        loadContent();
+        loadContentTeam();
     }, 100); 
 };
 
